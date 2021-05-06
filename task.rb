@@ -102,9 +102,9 @@ def q11
 
   # 以下に回答を記載
   sports.flatten!
-  sprts2 = sports.uniq
+  sports.uniq!
   puts "ユーザーの趣味一覧"
-  sprts2.each.with_index(1) do |sport, i|
+  sports.each.with_index(1) do |sport, i|
     puts "No#{i} #{sport}"
   end
 end
@@ -139,17 +139,9 @@ def q15
 
   # 以下に回答を記載
   puts "data1 = #{data1}"
-  if data1.has_key?(:age)
-    puts "OK"
-  else
-    puts "NG"
-  end
+  puts data1.has_key?(:age) ?  "OK" : "NG"
   puts "data2 = #{data2}"
-  if data2.has_key?(:age)
-    puts "OK"
-  else
-    puts "NG"
-  end
+  puts data2.has_key?(:age) ?  "OK" : "NG"
 end
 
 def q16
